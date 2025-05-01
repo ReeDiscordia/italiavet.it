@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -50,19 +49,6 @@ const Sidebar = () => {
               font-weight: bold;
               color: #04395e;
             }
-            .btn {
-              display: inline-block;
-              background-color: #04395e;
-              color: white;
-              padding: 10px 20px;
-              text-decoration: none;
-              border-radius: 4px;
-              font-weight: 500;
-              margin-top: 20px;
-            }
-            .btn:hover {
-              background-color: #032e4a;
-            }
           </style>
         </head>
         <body>
@@ -71,7 +57,6 @@ const Sidebar = () => {
             <p>Se sei interessato a collaborare con ItaliaVet e vuoi entrare a far parte del nostro team di specialisti, scrivi a questa email:</p>
             <p class="email">italiavet.info@gmail.com</p>
             <p>Saremo lieti di fornirti tutte le informazioni necessarie per iniziare questa collaborazione professionale.</p>
-            <a href="mailto:italiavet.info@gmail.com?subject=Registrazione%20specialista&body=Vorrei%20registrarmi%20come%20specialista" class="btn">Invia email</a>
           </div>
         </body>
         </html>
