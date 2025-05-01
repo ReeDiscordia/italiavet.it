@@ -13,7 +13,6 @@ const Header = () => {
                 alt="ITALIAVET Logo" 
                 className="h-16 drop-shadow-md brightness-0 invert"
               />
-              <span className="ml-2 text-xl font-bold text-[#FEC6A1]">Vet</span>
             </div>
           </div>
           
