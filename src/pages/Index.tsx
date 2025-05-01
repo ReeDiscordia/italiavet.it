@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
@@ -62,9 +63,11 @@ const Index = () => {
             </div>
             
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-italiavet-green hover:bg-italiavet-green/90 text-white font-medium">
-                Richiedi consulto
-              </Button>
+              <a href="https://form.jotform.com/251203819420347" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-italiavet-green hover:bg-italiavet-green/90 text-white font-medium">
+                  Richiedi consulto
+                </Button>
+              </a>
             </div>
           </div>
           

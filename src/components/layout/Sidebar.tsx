@@ -11,6 +11,10 @@ const popularTopics = [
 ];
 
 const Sidebar = () => {
+  const handleSpecialistRegistration = () => {
+    window.location.href = "mailto:italiavet.info@gmail.com?subject=Registrazione%20specialista&body=Vorrei%20registrarmi%20come%20specialista";
+  };
+
   return (
     <div className="space-y-6">
       <Card>
@@ -21,9 +25,11 @@ const Sidebar = () => {
           <p className="text-sm text-gray-600 mb-4">
             Hai una domanda per i nostri veterinari? Invia la tua richiesta e riceverai una risposta da uno specialista.
           </p>
-          <Button className="w-full bg-italiavet-green hover:bg-italiavet-green/90 text-white font-medium">
-            Richiedi consulto
-          </Button>
+          <a href="https://form.jotform.com/251203819420347" target="_blank" rel="noopener noreferrer">
+            <Button className="w-full bg-italiavet-green hover:bg-italiavet-green/90 text-white font-medium">
+              Richiedi consulto
+            </Button>
+          </a>
         </CardContent>
       </Card>
 
@@ -55,7 +61,10 @@ const Sidebar = () => {
           <p className="text-sm text-gray-600 mb-4">
             Unisciti al nostro team di specialisti e aiuta i proprietari di animali con le tue competenze.
           </p>
-          <Button className="w-full bg-italiavet-blue hover:bg-italiavet-blue/90 text-white font-medium">
+          <Button 
+            onClick={handleSpecialistRegistration} 
+            className="w-full bg-italiavet-blue hover:bg-italiavet-blue/90 text-white font-medium"
+          >
             Registrati come specialista
           </Button>
         </CardContent>

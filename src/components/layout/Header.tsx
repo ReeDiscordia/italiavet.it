@@ -17,9 +17,11 @@ const Header = () => {
           </div>
           
           <div className="hidden md:block">
-            <Button className="bg-white hover:bg-italiavet-light text-italiavet-green hover:text-italiavet-green font-medium transition-colors">
-              Richiedi consulto
-            </Button>
+            <a href="https://form.jotform.com/251203819420347" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-white hover:bg-italiavet-light text-italiavet-green hover:text-italiavet-green font-medium transition-colors">
+                Richiedi consulto
+              </Button>
+            </a>
           </div>
         </div>
         
