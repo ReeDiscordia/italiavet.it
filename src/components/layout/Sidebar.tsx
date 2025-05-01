@@ -12,7 +12,8 @@ const popularTopics = [
 
 const Sidebar = () => {
   const handleSpecialistRegistration = () => {
-    window.location.href = "mailto:italiavet.info@gmail.com?subject=Registrazione%20specialista&body=Vorrei%20registrarmi%20come%20specialista";
+    // Using window.open to open the mail client directly
+    window.open("mailto:italiavet.info@gmail.com?subject=Registrazione%20specialista&body=Vorrei%20registrarmi%20come%20specialista", "_blank");
   };
 
   return (
