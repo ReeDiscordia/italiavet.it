@@ -50,13 +50,14 @@ const Index = () => {
             </div>
             
             <div className="space-y-6">
-              {consultations.map(consultation => (
+              {consultations.map((consultation, index) => (
                 <ConsultationCard
                   key={consultation.id}
                   title={consultation.title}
                   question={consultation.question}
                   doctor={consultation.doctor}
                   specialty={consultation.specialty}
+                  index={index}
                 />
               ))}
             </div>
@@ -80,9 +81,9 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <img 
-                src="/lovable-uploads/bf5e0fad-44db-4a76-ae4f-f091ae6bde66.png" 
+                src="/lovable-uploads/f7ff5aff-9055-4044-b74c-76dfbeed3add.png" 
                 alt="ITALIAVET Logo" 
-                className="h-10 invert" 
+                className="h-10" 
               />
               <p className="mt-2 text-sm opacity-80">© 2025 ITALIAVET - Consulenza veterinaria online</p>
             </div>
