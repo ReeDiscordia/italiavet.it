@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
@@ -85,8 +84,7 @@ const Index = () => {
                 alt="ITALIAVET Logo" 
                 className="h-10 brightness-0 invert" 
               />
-              <span className="ml-2 text-lg font-bold">ITALIA<span className="text-[#F97316]">VET</span></span>
-              <p className="ml-4 text-sm opacity-80">© 2025 ITALIAVET - Consulenza veterinaria online</p>
+              <p className="ml-4 text-sm opacity-80">© 2025 - Consulenza veterinaria online</p>
             </div>
             
             <div className="flex gap-6">
