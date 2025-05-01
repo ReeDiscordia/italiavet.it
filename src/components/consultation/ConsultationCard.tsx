@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -9,16 +8,6 @@ interface ConsultationCardProps {
   specialty: string;
   index: number;
 }
-
-const getBackgroundColor = (index: number): string => {
-  const colors = [
-    "bg-[#F2FCE2]", // Soft Green
-    "bg-[#FEF7CD]", // Soft Yellow
-    "bg-[#E5DEFF]", // Soft Purple
-    "bg-[#D3E4FD]"  // Soft Blue
-  ];
-  return colors[index % colors.length];
-};
 
 const getAvatarImageByName = (doctorName: string): { src: string; fallback: string } => {
   // Extract first name from "il Dott. Marco Ferri" or "la Dott.ssa Carla Maria Gentili"
@@ -42,12 +31,12 @@ const getAvatarImageByName = (doctorName: string): { src: string; fallback: stri
 };
 
 const ConsultationCard = ({ title, question, doctor, specialty, index }: ConsultationCardProps) => {
-  const backgroundColor = getBackgroundColor(index);
+  // Use a consistent background color - light blue (#D3E4FD) for all cards
   const avatar = getAvatarImageByName(doctor);
   const isFemale = doctor.includes("Dott.ssa");
   
   return (
-    <Card className={`mb-6 hover:shadow-md transition-shadow ${backgroundColor} border-none`}>
+    <Card className="mb-6 hover:shadow-md transition-shadow bg-[#D3E4FD] border-none">
       <CardHeader className="pb-2">
         <CardTitle className="text-lg font-medium text-italiavet-text">{title}</CardTitle>
       </CardHeader>

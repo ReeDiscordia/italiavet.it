@@ -7,11 +7,14 @@ const Header = () => {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="mb-4 md:mb-0 flex items-center">
-            <img 
-              src="/lovable-uploads/f7ff5aff-9055-4044-b74c-76dfbeed3add.png" 
-              alt="ITALIAVET Logo" 
-              className="h-16 drop-shadow-md brightness-0 invert"
-            />
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/f7ff5aff-9055-4044-b74c-76dfbeed3add.png" 
+                alt="ITALIAVET Logo" 
+                className="h-16 drop-shadow-md brightness-0 invert"
+              />
+              <span className="ml-2 text-xl font-bold">ITALIA<span className="text-[#F97316]">VET</span></span>
+            </div>
           </div>
           
           <div className="hidden md:block">

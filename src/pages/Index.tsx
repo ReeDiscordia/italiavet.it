@@ -79,13 +79,14 @@ const Index = () => {
       <footer className="bg-italiavet-green text-white py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
+            <div className="mb-4 md:mb-0 flex items-center">
               <img 
                 src="/lovable-uploads/f7ff5aff-9055-4044-b74c-76dfbeed3add.png" 
                 alt="ITALIAVET Logo" 
-                className="h-10" 
+                className="h-10 brightness-0 invert" 
               />
-              <p className="mt-2 text-sm opacity-80">© 2025 ITALIAVET - Consulenza veterinaria online</p>
+              <span className="ml-2 text-lg font-bold">ITALIA<span className="text-[#F97316]">VET</span></span>
+              <p className="ml-4 text-sm opacity-80">© 2025 ITALIAVET - Consulenza veterinaria online</p>
             </div>
             
             <div className="flex gap-6">
