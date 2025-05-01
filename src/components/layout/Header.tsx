@@ -10,7 +10,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/f7ff5aff-9055-4044-b74c-76dfbeed3add.png" 
               alt="ITALIAVET Logo" 
-              className="h-16 drop-shadow-md" 
+              className="h-16 drop-shadow-md brightness-0 invert"
             />
           </div>
           

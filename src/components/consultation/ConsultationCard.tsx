@@ -1,7 +1,6 @@
 
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Doctor } from "@/components/ui/button";
 
 interface ConsultationCardProps {
   title: string;
