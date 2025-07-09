@@ -99,7 +99,7 @@ const Sidebar = () => {
             </p>
           </div>
           <p className="text-sm text-gray-700 mb-4 font-medium">Niente più attese, niente stress. Scrivici ora!</p>
-          <a href="https://preview--pocketvet-benvenuto-chat.lovable.app" target="_blank" rel="noopener noreferrer">
+          <a href="https://form.jotform.com/250906747698373" target="_blank" rel="noopener noreferrer">
             <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 rounded-lg flex items-center justify-center gap-2">
               <img src="/lovable-uploads/c936bb02-81f9-4d9b-ba49-3f3113013125.png" alt="WhatsApp" className="w-4 h-4" />
               Parla con un veterinario – costo 7€
