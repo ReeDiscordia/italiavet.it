@@ -1,14 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-const popularTopics = [
-  "Parvovirosi nel cucciolo",
-  "Leishmaniosi",
-  "Diarrea persistente",
-  "Test FIV/FeLV nel gatto",
-  "Integratori"
-];
-
+const popularTopics = ["Parvovirosi nel cucciolo", "Leishmaniosi", "Diarrea persistente", "Test FIV/FeLV nel gatto", "Integratori"];
 const Sidebar = () => {
   const handleSpecialistRegistration = () => {
     // Open a new window with collaboration message
@@ -64,17 +56,13 @@ const Sidebar = () => {
       newWindow.document.close();
     }
   };
-
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium">Richiedi un consulto</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-sm text-gray-600 mb-4">
-            Hai una domanda per i nostri veterinari? Invia la tua richiesta e riceverai una risposta da uno specialista.
-          </p>
+          <p className="text-sm text-gray-600 mb-4">Hai una domanda per i nostri veterinari? Invia la tua richiesta e riceverai una risposta da uno specialista sul forum.</p>
           <a href="https://form.jotform.com/251203819420347" target="_blank" rel="noopener noreferrer">
             <Button className="w-full bg-italiavet-green hover:bg-italiavet-green/90 text-white font-medium">
               Richiedi consulto
@@ -89,16 +77,11 @@ const Sidebar = () => {
         </CardHeader>
         <CardContent>
           <ul className="space-y-2">
-            {popularTopics.map((topic, index) => (
-              <li key={index}>
-                <a 
-                  href="#" 
-                  className="text-italiavet-blue hover:underline block py-2 px-3 rounded-md hover:bg-italiavet-light transition-colors"
-                >
+            {popularTopics.map((topic, index) => <li key={index}>
+                <a href="#" className="text-italiavet-blue hover:underline block py-2 px-3 rounded-md hover:bg-italiavet-light transition-colors">
                   {topic}
                 </a>
-              </li>
-            ))}
+              </li>)}
           </ul>
         </CardContent>
       </Card>
@@ -139,16 +122,11 @@ const Sidebar = () => {
           <p className="text-sm text-gray-600 mb-4">
             Unisciti al nostro team di specialisti e aiuta i proprietari di animali con le tue competenze.
           </p>
-          <Button 
-            onClick={handleSpecialistRegistration} 
-            className="w-full bg-italiavet-blue hover:bg-italiavet-blue/90 text-white font-medium"
-          >
+          <Button onClick={handleSpecialistRegistration} className="w-full bg-italiavet-blue hover:bg-italiavet-blue/90 text-white font-medium">
             Registrati come specialista
           </Button>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default Sidebar;
