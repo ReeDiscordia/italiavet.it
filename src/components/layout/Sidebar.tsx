@@ -1,7 +1,42 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-const popularTopics = ["Parvovirosi nel cucciolo", "Leishmaniosi", "Diarrea persistente", "Test FIV/FeLV nel gatto", "Integratori"];
+import { useState, useEffect } from "react";
+
+const allTopics = [
+  // Domande esistenti
+  "Parvovirosi nel cucciolo", 
+  "Leishmaniosi", 
+  "Diarrea persistente", 
+  "Test FIV/FeLV nel gatto", 
+  "Integratori",
+  // Nuove domande
+  "Occhio rosso che lacrima",
+  "Lipoma ulcerato cane anziano",
+  "Incontinenza post sterilizzazione",
+  "Virus intestinale",
+  "Dimagrimento cane piccolo",
+  "Pallina su palpebra",
+  "Goccioline strane su brandina",
+  "Difficoltà somministrazione compresse",
+  "Gatto rauco",
+  "Neoformazione sulla coda",
+  "Sterilizzazione consigliata da eco",
+  "Passaggio crocchette",
+  "Diarrea con il caldo",
+  "Tartufo screpolato"
+];
+
+const getRandomTopics = () => {
+  const shuffled = [...allTopics].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, 5);
+};
 const Sidebar = () => {
+  const [popularTopics, setPopularTopics] = useState<string[]>([]);
+
+  useEffect(() => {
+    setPopularTopics(getRandomTopics());
+  }, []);
+
   const handleSpecialistRegistration = () => {
     // Open a new window with collaboration message
     const newWindow = window.open("", "_blank");
@@ -106,9 +141,9 @@ const Sidebar = () => {
         <CardContent>
           <ul className="space-y-2">
             {popularTopics.map((topic, index) => <li key={index}>
-                <a href="#" className="text-italiavet-blue hover:underline block py-2 px-3 rounded-md hover:bg-italiavet-light transition-colors">
+                <span className="text-italiavet-blue block py-2 px-3 rounded-md hover:bg-italiavet-light transition-colors cursor-default">
                   {topic}
-                </a>
+                </span>
               </li>)}
           </ul>
         </CardContent>
