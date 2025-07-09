@@ -71,21 +71,6 @@ const Sidebar = () => {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-lg font-medium">Argomenti più discussi</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ul className="space-y-2">
-            {popularTopics.map((topic, index) => <li key={index}>
-                <a href="#" className="text-italiavet-blue hover:underline block py-2 px-3 rounded-md hover:bg-italiavet-light transition-colors">
-                  {topic}
-                </a>
-              </li>)}
-          </ul>
-        </CardContent>
-      </Card>
-
       {/* WhatsApp Consultation Card */}
       <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-300 border-2 shadow-lg">
         <CardHeader className="pb-2">
@@ -111,6 +96,21 @@ const Sidebar = () => {
             </Button>
           </a>
           <p className="text-xs text-gray-500 mt-2 text-center">Pagamento sicuro con PayPal, carta di credito o Apple/Google Pay</p>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-lg font-medium">Argomenti più discussi</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ul className="space-y-2">
+            {popularTopics.map((topic, index) => <li key={index}>
+                <a href="#" className="text-italiavet-blue hover:underline block py-2 px-3 rounded-md hover:bg-italiavet-light transition-colors">
+                  {topic}
+                </a>
+              </li>)}
+          </ul>
         </CardContent>
       </Card>
 
