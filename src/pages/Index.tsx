@@ -61,9 +61,7 @@ const Index = () => {
               </div>
               <p className="text-gray-700 mb-4 font-medium">Niente più attese, niente stress. Scrivici ora!</p>
               <a href="https://preview--pocketvet-benvenuto-chat.lovable.app" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2">
-                  📱 Parla con un veterinario – costo 7€
-                </Button>
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2">📱 Parla ora con un veterinario – costo 7€</Button>
               </a>
               <p className="text-xs text-gray-500 mt-2 text-center">Pagamento sicuro con PayPal, carta di credito o Apple/Google Pay</p>
             </div>
