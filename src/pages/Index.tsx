@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
 import ConsultationCard from "@/components/consultation/ConsultationCard";
@@ -172,12 +173,20 @@ const Index = () => {
               {consultations.map((consultation, index) => <ConsultationCard key={consultation.id} title={consultation.title} question={consultation.question} doctor={consultation.doctor} specialty={consultation.specialty} index={index} />)}
             </div>
             
-            <div className="mt-8 text-center">
-              <a href="https://form.jotform.com/251203819420347" target="_blank" rel="noopener noreferrer">
-                <Badge variant="default" className="bg-italiavet-green hover:bg-italiavet-green/90 text-white px-4 py-2 text-sm cursor-pointer">
-                  Richiedi consulto
-                </Badge>
-              </a>
+            <div className="mt-8 max-w-md mx-auto">
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg font-medium">Richiedi un consulto sul forum</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600 mb-4">Hai una domanda per i nostri veterinari? Invia la tua richiesta e riceverai una risposta da uno specialista sul forum.</p>
+                  <a href="https://form.jotform.com/251203819420347" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-italiavet-green hover:bg-italiavet-green/90 text-white font-medium">
+                      Richiedi consulto
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
             </div>
 
             {/* WhatsApp Consultation Box */}
