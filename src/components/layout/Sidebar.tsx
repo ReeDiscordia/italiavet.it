@@ -28,7 +28,9 @@ const allTopics = [
 
 const getRandomTopics = () => {
   const shuffled = [...allTopics].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, 5);
+  const selected = shuffled.slice(0, 5);
+  console.log("Domande estratte:", selected);
+  return selected;
 };
 const Sidebar = () => {
   const [popularTopics, setPopularTopics] = useState<string[]>([]);
