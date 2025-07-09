@@ -59,7 +59,7 @@ const Sidebar = () => {
   return <div className="space-y-6">
       <Card>
         <CardHeader className="pb-2">
-          <CardTitle className="text-lg font-medium">Richiedi un consulto</CardTitle>
+          <CardTitle className="text-lg font-medium">Richiedi un consulto sul forum</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-sm text-gray-600 mb-4">Hai una domanda per i nostri veterinari? Invia la tua richiesta e riceverai una risposta da uno specialista sul forum.</p>
