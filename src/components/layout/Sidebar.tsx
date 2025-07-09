@@ -103,6 +103,33 @@ const Sidebar = () => {
         </CardContent>
       </Card>
 
+      {/* WhatsApp Consultation Card */}
+      <Card className="bg-white border border-gray-200">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-lg font-medium">Consulenza urgente</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-gray-700 mb-3">
+            Hai una domanda urgente? Scrivici su WhatsApp per ricevere una risposta rapida dal nostro team veterinario.
+          </p>
+          <div className="space-y-2 mb-4">
+            <p className="text-xs text-gray-600 flex items-center gap-2">
+              📸 Puoi inviare foto e video del tuo animale.
+            </p>
+            <p className="text-xs text-gray-600 flex items-center gap-2">
+              ⏱ Risposta entro poche ore.
+            </p>
+          </div>
+          <p className="text-sm text-gray-700 mb-4 font-medium">Niente più attese, niente stress. Scrivici ora!</p>
+          <a href="https://preview--pocketvet-benvenuto-chat.lovable.app" target="_blank" rel="noopener noreferrer">
+            <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 rounded-lg flex items-center justify-center gap-2">
+              💬 Parla con un veterinario – costo 7€
+            </Button>
+          </a>
+          <p className="text-xs text-gray-500 mt-2 text-center">Pagamento sicuro con PayPal, carta di credito o Apple/Google Pay</p>
+        </CardContent>
+      </Card>
+
       <Card className="bg-italiavet-light border-italiavet-blue border">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg font-medium">Sei un veterinario?</CardTitle>

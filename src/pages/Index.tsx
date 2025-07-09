@@ -69,6 +69,26 @@ const Index = () => {
                 </Button>
               </a>
             </div>
+
+            {/* WhatsApp Consultation Box */}
+            <div className="mt-8 bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Hai una domanda urgente? Scrivici su WhatsApp per ricevere una risposta rapida dal nostro team veterinario.</h3>
+              <div className="space-y-2 mb-4">
+                <p className="text-gray-600 flex items-center gap-2">
+                  📸 Puoi inviare foto e video del tuo animale.
+                </p>
+                <p className="text-gray-600 flex items-center gap-2">
+                  ⏱ Risposta entro poche ore.
+                </p>
+              </div>
+              <p className="text-gray-700 mb-4 font-medium">Niente più attese, niente stress. Scrivici ora!</p>
+              <a href="https://preview--pocketvet-benvenuto-chat.lovable.app" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2">
+                  💬 Parla con un veterinario – costo 7€
+                </Button>
+              </a>
+              <p className="text-xs text-gray-500 mt-2 text-center">Pagamento sicuro con PayPal, carta di credito o Apple/Google Pay</p>
+            </div>
           </div>
           
           {/* Sidebar */}
