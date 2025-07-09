@@ -67,47 +67,6 @@ const Sidebar = () => {
 
   return (
     <div className="space-y-6">
-      <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-lg font-medium">Richiedi un consulto sul forum</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-gray-600 mb-4">Hai una domanda per i nostri veterinari? Invia la tua richiesta e riceverai una risposta da uno specialista sul forum.</p>
-          <a href="https://form.jotform.com/251203819420347" target="_blank" rel="noopener noreferrer">
-            <Button className="w-full bg-italiavet-green hover:bg-italiavet-green/90 text-white font-medium">
-              Richiedi consulto
-            </Button>
-          </a>
-        </CardContent>
-      </Card>
-
-      {/* WhatsApp Consultation Card */}
-      <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-300 border-2 shadow-lg">
-        <CardHeader className="pb-2">
-          <CardTitle className="text-xl font-bold text-green-800">⚡ Consulenza urgente</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-gray-700 mb-3">
-            Hai una domanda urgente? Scrivici su WhatsApp per ricevere una risposta rapida dal nostro team veterinario.
-          </p>
-          <div className="space-y-2 mb-4">
-            <p className="text-xs text-gray-600 flex items-center gap-2">
-              <span className="text-green-500">✓</span> Puoi inviare foto e video del tuo animale.
-            </p>
-            <p className="text-xs text-gray-600 flex items-center gap-2">
-              <span className="text-green-500">✓</span> Risposta entro poche ore.
-            </p>
-          </div>
-          <p className="text-sm text-gray-700 mb-4 font-medium">Niente più attese, niente stress. Scrivici ora!</p>
-          <a href="https://form.jotform.com/251895814889378" target="_blank" rel="noopener noreferrer">
-            <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 rounded-lg flex items-center justify-center gap-2">
-              <img src="/lovable-uploads/c936bb02-81f9-4d9b-ba49-3f3113013125.png" alt="WhatsApp" className="w-4 h-4" />
-              Parla con un veterinario – costo 7€
-            </Button>
-          </a>
-          <p className="text-xs text-gray-500 mt-2 text-center">Pagamento sicuro con PayPal, carta di credito o Apple/Google Pay</p>
-        </CardContent>
-      </Card>
 
       <Card>
         <CardHeader className="pb-2">
