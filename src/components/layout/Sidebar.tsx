@@ -114,16 +114,16 @@ const Sidebar = () => {
           </p>
           <div className="space-y-2 mb-4">
             <p className="text-xs text-gray-600 flex items-center gap-2">
-              📸 Puoi inviare foto e video del tuo animale.
+              <span className="text-green-500">✓</span> Puoi inviare foto e video del tuo animale.
             </p>
             <p className="text-xs text-gray-600 flex items-center gap-2">
-              ⏱ Risposta entro poche ore.
+              <span className="text-green-500">✓</span> Risposta entro poche ore.
             </p>
           </div>
           <p className="text-sm text-gray-700 mb-4 font-medium">Niente più attese, niente stress. Scrivici ora!</p>
           <a href="https://preview--pocketvet-benvenuto-chat.lovable.app" target="_blank" rel="noopener noreferrer">
             <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 rounded-lg flex items-center justify-center gap-2">
-              💬 Parla con un veterinario – costo 7€
+              📱 Parla con un veterinario – costo 7€
             </Button>
           </a>
           <p className="text-xs text-gray-500 mt-2 text-center">Pagamento sicuro con PayPal, carta di credito o Apple/Google Pay</p>
