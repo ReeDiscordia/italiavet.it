@@ -2,32 +2,159 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
 import ConsultationCard from "@/components/consultation/ConsultationCard";
-const consultations = [{
-  id: 1,
-  title: "Problema di testicolo non sceso in cucciolo",
-  question: "Buongiorno, ho un cucciolo con un solo testicolo sceso. Vorrei sapere se è necessario rimuovere chirurgicamente quello che non è sceso e, in caso affermativo, se si tratta di un intervento complesso o rischioso. Quanto dura il recupero? Grazie mille per il chiarimento.",
-  doctor: "il Dott. Marco Ferri",
-  specialty: "Specialista in chirurgia"
-}, {
-  id: 2,
-  title: "Gatto che lecca l'intonaco del muro",
-  question: "Salve, ho notato che il mio gatto ogni tanto lecca l'intonaco del muro. È un comportamento normale? Devo preoccuparmi?",
-  doctor: "la Dott.ssa Carla Maria Gentili",
-  specialty: "Esperta in medicina interna e nutrizione felina"
-}, {
-  id: 3,
-  title: "Terza palpebra visibile in un gatto",
-  question: "Il mio gatto mangia, dorme e gioca come sempre, sembra stare bene, ma ho notato che si vede la terza palpebra in entrambi gli occhi. È normale? Grazie.",
-  doctor: "il Dott. Francesco Saverio Neri",
-  specialty: "Specialista in oftalmologia veterinaria"
-}, {
-  id: 4,
-  title: "Diarrea persistente in cane",
-  question: "Da febbraio il mio cagnolino ha episodi di diarrea (a volte con sangue) che durano anche una settimana, soprattutto dopo le passeggiate. È vispa, mangia bene e sta bene nel complesso. Abbiamo fatto ecografie, analisi feci negative, cure con antibiotico e cortisone. Con il cibo casalingo è migliorato per un mese, poi la diarrea è tornata. Il mio veterinario sta provando diverse terapie, ma non troviamo la causa. Avete suggerimenti o ipotesi da valutare?",
-  doctor: "la Dott.ssa Silvia Romano",
-  specialty: "Specialista in gastroenterologia"
-}];
+import { useState, useEffect } from "react";
+
+const allQuestions = [
+  // Domande esistenti
+  {
+    id: 1,
+    title: "Parvovirosi nel cucciolo",
+    question: "Il mio cucciolo ha sintomi sospetti di parvovirosi. Quali sono i primi segni da osservare?",
+    doctor: "il Dott. Marco Ferri",
+    specialty: "Specialista in malattie infettive"
+  },
+  {
+    id: 2,
+    title: "Leishmaniosi",
+    question: "Vorrei sapere di più sulla leishmaniosi e come proteggere il mio cane.",
+    doctor: "la Dott.ssa Carla Maria Gentili",
+    specialty: "Esperta in medicina interna"
+  },
+  {
+    id: 3,
+    title: "Diarrea persistente",
+    question: "Il mio cane ha diarrea da diversi giorni. Quando devo preoccuparmi?",
+    doctor: "il Dott. Francesco Saverio Neri",
+    specialty: "Specialista in gastroenterologia"
+  },
+  {
+    id: 4,
+    title: "Test FIV/FeLV nel gatto",
+    question: "È necessario fare il test FIV/FeLV al mio gatto? Quando è consigliato?",
+    doctor: "la Dott.ssa Silvia Romano",
+    specialty: "Specialista in medicina felina"
+  },
+  {
+    id: 5,
+    title: "Integratori",
+    question: "Quali integratori sono davvero utili per la salute del mio animale?",
+    doctor: "il Dott. Andrea Palumbo",
+    specialty: "Veterinario nutrizionista"
+  },
+  // Nuove domande
+  {
+    id: 6,
+    title: "Occhio rosso che lacrima",
+    question: "Buonasera, in attesa della visita, vorrei sapere se devo preoccuparmi: la mia gattina ha un occhio molto arrossato e lacrima da alcuni giorni. Lo sto pulendo delicatamente con acqua tiepida ma non noto miglioramenti. Qual è il trattamento più indicato in questi casi?",
+    doctor: "la Dott.ssa Elisa Bianchi",
+    specialty: "Veterinaria esperta in oftalmologia felina"
+  },
+  {
+    id: 7,
+    title: "Lipoma ulcerato cane anziano",
+    question: "Il mio cane di 14 anni ha un lipoma ulcerato che non è possibile asportare chirurgicamente. Lo sto disinfettando e applico regolarmente le creme prescritte. Esistono terapie aggiuntive o accorgimenti utili per contenere l'ulcerazione e prevenire infezioni?",
+    doctor: "il Dr. Marco Giordano",
+    specialty: "Veterinario chirurgo con esperienza in geriatria canina"
+  },
+  {
+    id: 8,
+    title: "Incontinenza post sterilizzazione",
+    question: "La mia cagnolona sterilizzata da anni è in terapia con Propalin per incontinenza urinaria, ma negli ultimi tempi il farmaco sembra meno efficace. Vorrei chiedere un parere sull'uso di Incurin: quando è indicato e quali sono gli effetti collaterali da monitorare?",
+    doctor: "la Dott.ssa Chiara Rinaldi",
+    specialty: "Veterinaria esperta in urologia e medicina interna"
+  },
+  {
+    id: 9,
+    title: "Virus intestinale",
+    question: "Una delle mie due cagnoline ha una forte diarrea da alcuni giorni, nonostante il trattamento prescritto dalla clinica. Rifiuta il cibo e non mostra miglioramenti. Vorrei sapere quali sono i passi successivi da seguire e quando è necessario un ricovero.",
+    doctor: "il Dr. Lorenzo Moretti",
+    specialty: "Medico veterinario con focus in gastroenterologia canina"
+  },
+  {
+    id: 10,
+    title: "Dimagrimento cane piccolo",
+    question: "Salve, la mia cagnolina di piccola taglia ha perso peso visibilmente nelle ultime settimane, pur mangiando come al solito. Può essere dovuto al caldo oppure è consigliabile fare accertamenti specifici?",
+    doctor: "la Dott.ssa Francesca De Luca",
+    specialty: "Veterinaria specializzata in patologie metaboliche"
+  },
+  {
+    id: 11,
+    title: "Pallina su palpebra",
+    question: "Buongiorno, ho notato una piccola massa sulla palpebra del mio cucciolo di 10 mesi. L'ho pulita con fisiologica ma non è cambiato nulla. È opportuno aspettare qualche giorno o è meglio farlo visitare subito?",
+    doctor: "il Dr. Matteo Ferrari",
+    specialty: "Veterinario con competenze in dermatologia e chirurgia oculare"
+  },
+  {
+    id: 12,
+    title: "Goccioline strane su brandina",
+    question: "La mia cagnolina sterilizzata di 12 anni lascia occasionalmente delle goccioline sul tessuto dove riposa. Pulendole, noto un alone rosato/giallognolo. Gli esami recenti dell'addome erano nella norma. Potrebbe trattarsi di perdite urinarie o altro? Serve un controllo specifico?",
+    doctor: "la Dott.ssa Valentina Serra",
+    specialty: "Veterinaria esperta in apparato urinario e riproduttivo"
+  },
+  {
+    id: 13,
+    title: "Difficoltà somministrazione compresse",
+    question: "Mi è stato prescritto un integratore intestinale in compresse (tipo Florentero) per il mio cane, ma ho grosse difficoltà a somministrarle: sono ruvide e difficili da mascherare nel cibo. Esistono formulazioni equivalenti più semplici da somministrare o alternative liquide?",
+    doctor: "il Dr. Fabio Ruggeri",
+    specialty: "Veterinario nutrizionista e consulente in gestione farmacologica"
+  },
+  {
+    id: 14,
+    title: "Gatto rauco",
+    question: "Da ieri il mio gatto adulto ha perso quasi completamente la voce. Il veterinario non ha riscontrato febbre o problemi respiratori e ha suggerito di attendere. In casi del genere, è utile iniziare una terapia preventiva o è corretto monitorare senza intervenire?",
+    doctor: "la Dott.ssa Marta Greco",
+    specialty: "Veterinaria esperta in medicina felina e malattie respiratorie"
+  },
+  {
+    id: 15,
+    title: "Neoformazione sulla coda",
+    question: "In pochi giorni si è sviluppata una massa sulla coda della mia cagnolina, che inizialmente sembrava un punto nero. Ha rilasciato materiale denso spontaneamente. È stata programmata l'analisi del contenuto. In questi casi è consigliabile procedere con urgenza anche a una rimozione?",
+    doctor: "il Dr. Riccardo Neri",
+    specialty: "Medico veterinario specializzato in oncologia e chirurgia dei tessuti molli"
+  },
+  {
+    id: 16,
+    title: "Sterilizzazione consigliata da eco",
+    question: "Il mio labrador femmina di 11 anni ha effettuato un'ecografia addominale da cui è emersa l'indicazione alla sterilizzazione. Considerando l'età, quali sono i rischi e i benefici dell'intervento? È effettivamente consigliato intervenire in questa fase della vita?",
+    doctor: "la Dott.ssa Giulia Marchetti",
+    specialty: "Veterinaria con esperienza in chirurgia e gestione del paziente geriatrico"
+  },
+  {
+    id: 17,
+    title: "Passaggio crocchette",
+    question: "Sto effettuando il passaggio da un tipo di crocchette gastrointestinal low fat a una nuova marca simile. L'indicazione è di farlo in 15 giorni: è un tempo corretto oppure si può ridurre se il cane tollera bene il nuovo alimento?",
+    doctor: "il Dr. Andrea Palumbo",
+    specialty: "Veterinario nutrizionista"
+  },
+  {
+    id: 18,
+    title: "Diarrea con il caldo",
+    question: "Negli ultimi giorni il mio cane ha sviluppato episodi di diarrea, pur mangiando crocchette come sempre. È opportuno effettuare controlli specifici in questi casi o può essere un effetto passeggero del caldo?",
+    doctor: "la Dott.ssa Laura Conti",
+    specialty: "Veterinaria specializzata in medicina interna e disturbi gastrointestinali"
+  },
+  {
+    id: 19,
+    title: "Tartufo screpolato",
+    question: "Il tartufo del mio cane appare screpolato e leggermente arrossato da un lato. Considerando che tende a tenere spesso il naso a contatto con il terreno, devo farlo visitare subito o posso aspettare il controllo già previsto tra 10 giorni?",
+    doctor: "il Dr. Davide Mancini",
+    specialty: "Veterinario dermatologo"
+  }
+];
+
+const getRandomQuestions = () => {
+  const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, 4);
+};
 const Index = () => {
+  const [consultations, setConsultations] = useState<typeof allQuestions>([]);
+
+  useEffect(() => {
+    const randomQuestions = getRandomQuestions();
+    console.log("Domande estratte per la pagina principale:", randomQuestions);
+    setConsultations(randomQuestions);
+  }, []);
+
   return <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
       
