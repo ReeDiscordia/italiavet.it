@@ -173,7 +173,7 @@ const Index = () => {
               {consultations.map((consultation, index) => <ConsultationCard key={consultation.id} title={consultation.title} question={consultation.question} doctor={consultation.doctor} specialty={consultation.specialty} index={index} />)}
             </div>
             
-            <div className="mt-8 max-w-md mx-auto">
+            <div className="mt-8 max-w-lg mx-auto">
               <Card>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg font-medium">Richiedi un consulto sul forum</CardTitle>
