@@ -59,7 +59,7 @@ const Index = () => {
                 <p className="text-gray-600 flex items-center gap-2">
                   📸 Puoi inviare foto e video del tuo animale.
                 </p>
-                <p className="text-gray-600 flex items-center gap-2">⏱  Risposta entro poche ore.</p>
+                <p className="text-gray-600 flex items-center gap-2">Risposta entro poche ore.</p>
               </div>
               <p className="text-gray-700 mb-4 font-medium">Niente più attese, niente stress. Scrivici ora!</p>
               <a href="https://preview--pocketvet-benvenuto-chat.lovable.app" target="_blank" rel="noopener noreferrer">
