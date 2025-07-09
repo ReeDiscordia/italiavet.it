@@ -87,9 +87,9 @@ const Sidebar = () => {
       </Card>
 
       {/* WhatsApp Consultation Card */}
-      <Card className="bg-white border border-gray-200">
+      <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-300 border-2 shadow-lg">
         <CardHeader className="pb-2">
-          <CardTitle className="text-lg font-medium">Consulenza urgente</CardTitle>
+          <CardTitle className="text-xl font-bold text-green-800">⚡ Consulenza urgente</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-sm text-gray-700 mb-3">
