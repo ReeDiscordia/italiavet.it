@@ -68,7 +68,7 @@ const Index = () => {
                   <p className="text-xs text-gray-500 mt-2 text-center">Pagamento sicuro con PayPal, carta di credito o Apple/Google Pay</p>
                 </div>
                 <div className="flex-shrink-0">
-                  <img src="/src/assets/veterinaria-rassicurante.jpg" alt="Veterinaria rassicurante" className="w-32 h-32 object-cover rounded-lg" />
+                  <img src="/lovable-uploads/000f984b-b503-4282-a557-4723e3faf63c.png" alt="Veterinaria rassicurante" className="w-32 h-32 object-cover rounded-lg" />
                 </div>
               </div>
             </div>
