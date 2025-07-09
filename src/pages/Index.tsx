@@ -172,7 +172,7 @@ const Index = () => {
               {consultations.map((consultation, index) => <ConsultationCard key={consultation.id} title={consultation.title} question={consultation.question} doctor={consultation.doctor} specialty={consultation.specialty} index={index} />)}
             </div>
             
-            <div className="mt-8 flex justify-end">
+            <div className="mt-8 text-center">
               <a href="https://form.jotform.com/251203819420347" target="_blank" rel="noopener noreferrer">
                 <Badge variant="default" className="bg-italiavet-green hover:bg-italiavet-green/90 text-white px-4 py-2 text-sm cursor-pointer">
                   Richiedi consulto
