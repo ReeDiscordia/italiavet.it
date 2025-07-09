@@ -56,9 +56,7 @@ const Index = () => {
             <div className="mt-8 bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">Hai una domanda urgente? Scrivici su WhatsApp per ricevere una risposta rapida dal nostro team veterinario.</h3>
               <div className="space-y-2 mb-4">
-                <p className="text-gray-600 flex items-center gap-2">
-                  📸 Puoi inviare foto e video del tuo animale.
-                </p>
+                <p className="text-gray-600 flex items-center gap-2">Puoi inviare foto e video del tuo animale.</p>
                 <p className="text-gray-600 flex items-center gap-2">Risposta entro poche ore.</p>
               </div>
               <p className="text-gray-700 mb-4 font-medium">Niente più attese, niente stress. Scrivici ora!</p>
